@@ -205,3 +205,92 @@ a { color: inherit; }
     from { opacity: 0; transform: translateY(1rem); }
   }
 }
+
+
+/* Domain-sale extension: keeps the original Rinatta palette, typography,
+   radial background, fine grid and circular emblem unchanged. */
+html { scroll-behavior: smooth; }
+.page { grid-template-rows: auto auto auto auto auto auto; background: radial-gradient(circle at 72% 24%, #183740 0, var(--surface) 20%, var(--ink) 51%); }
+.page::before { pointer-events: none; }
+.hero { min-height: min(53rem, calc(100svh - 8rem)); }
+.hero-copy { padding: 4.75rem 0 5.75rem; }
+.hero h1 { max-width: 11ch; font-size: clamp(3.2rem, 6.25vw, 6.75rem); line-height: .95; }
+.hero h1 em { margin-left: .32em; }
+.introduction { max-width: 32rem; }
+.introduction strong, .acquisition-copy strong { color: #d8e6dd; font-weight: 500; }
+.sale-summary { margin-top: 2rem; padding: 1.25rem 0 0; border-top: 1px solid var(--line); width: min(100%, 27.5rem); }
+.sale-label { display: block; color: #b8cbc5; font-size: .59rem; letter-spacing: .24em; text-transform: uppercase; }
+.sale-price { margin-top: .38rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.35rem, 3.6vw, 3.5rem); line-height: 1.2; letter-spacing: -.025em; }
+.sale-price span { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--muted); font-size: .67rem; letter-spacing: .2em; }
+.sale-detail { display: block; margin-top: .25rem; color: var(--muted); font-size: .78rem; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; margin-top: 1.65rem; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 1rem; min-height: 3.1rem; padding: .9rem 1.45rem; border: 1px solid transparent; text-decoration: none; font-size: .69rem; font-weight: 600; letter-spacing: .105em; transition: background .2s ease, color .2s ease, transform .2s ease; }
+.button-primary { color: #081116; background: linear-gradient(125deg, var(--sage), var(--aqua)); }
+.button-primary:hover { background: #d0eee4; transform: translateY(-2px); }
+.text-link, .offer-link { padding: .75rem 0; color: #d5e4df; font-size: .72rem; letter-spacing: .04em; text-decoration-color: #688981; text-underline-offset: .4rem; }
+.text-link:hover, .offer-link:hover { color: #fff; text-decoration-color: var(--aqua); }
+.payment-note { max-width: 29rem; margin: 1.15rem 0 0; color: #90a4a2; font-size: .69rem; line-height: 1.75; }
+.name-story, .possibilities, .acquisition { border-top: 1px solid var(--line); padding: clamp(4.5rem, 8vw, 7.5rem) 0; }
+.section-intro { max-width: 48rem; }
+.section-intro h2, .acquisition h2 { margin: 1.3rem 0 1.5rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.3rem, 5vw, 4.5rem); font-weight: 400; line-height: 1.14; letter-spacing: -.04em; }
+.section-intro h2 em, .acquisition h2 em { color: #b6c9c4; font-weight: 400; }
+.section-intro > p:last-child, .acquisition-copy > p:last-child { max-width: 35rem; margin: 0; color: var(--muted); font-size: .94rem; line-height: 1.85; }
+.origin-pair { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: clamp(1rem, 5vw, 5rem); align-items: center; margin-top: 3.5rem; padding: 2.3rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.origin-item { display: flex; flex-direction: column; align-items: flex-start; gap: .65rem; }
+.origin-language, .sector-index { color: #a8d3cb; font-size: .63rem; letter-spacing: .2em; }
+.origin-word { color: var(--text); font-family: Georgia, "Times New Roman", serif; font-size: clamp(3rem, 7vw, 6.1rem); line-height: 1.05; letter-spacing: -.05em; }
+.origin-mark { color: var(--aqua); }
+.origin-meaning { color: #aabbaf; font-size: .9rem; }
+.origin-plus { color: var(--sage); font-family: Georgia, "Times New Roman", serif; font-size: 2.6rem; }
+.story-caption { max-width: 48rem; margin: 1.5rem 0 0; color: var(--muted); font-size: .84rem; line-height: 1.85; }
+.story-caption strong { color: #d6e5df; font-weight: 500; }
+.section-intro-wide { max-width: 55rem; }
+.sector-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 3rem); margin-top: 3.2rem; }
+.sector { border-top: 1px solid #657c7a; padding-top: 1.2rem; }
+.sector h3 { margin: 2.2rem 0 .9rem; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(1.45rem, 2vw, 2rem); }
+.sector p { margin: 0; max-width: 17rem; color: var(--muted); font-size: .83rem; line-height: 1.85; }
+.acquisition { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(17rem,.7fr); align-items: start; gap: 3rem; }
+.acquisition-action { padding: 1.8rem 2rem 2rem; border: 1px solid #536866; background: rgb(16 36 42 / 62%); }
+.acquisition-price { margin: .75rem 0 1.5rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(3rem, 5vw, 4.3rem); letter-spacing: -.035em; }
+.acquisition-action .button { width: 100%; }
+.offer-link { display: block; width: fit-content; margin: .85rem auto .5rem; text-align: center; }
+.acquisition-action .payment-note { margin-top: 1.2rem; }
+.site-footer { padding: 1.5rem 0 .25rem; }
+a:focus-visible { outline: 2px solid var(--aqua); outline-offset: .3rem; }
+@media (max-width: 66rem) {
+  .hero h1 { font-size: clamp(3.35rem, 6vw, 5rem); }
+  .badge { width: min(34vw, 23rem); }
+  .badge-name { font-size: 3rem; }
+}
+@media (max-width: 52rem) {
+  .hero { min-height: 0; }
+  .hero-copy { padding: 6.5rem 0 7rem; }
+  .hero h1 { font-size: clamp(3.7rem, 12vw, 5.5rem); }
+  .badge-stage { top: 9rem; opacity: .26; }
+  .badge { width: 26rem; }
+  .badge-name { font-size: 3rem; }
+  .acquisition { grid-template-columns: 1fr; }
+  .acquisition-action { max-width: 30rem; }
+}
+@media (max-width: 40rem) {
+  .hero-copy { padding: 5.5rem 0 6rem; }
+  .hero h1 { font-size: clamp(3.25rem, 14vw, 4.5rem); }
+  .hero h1 em { margin-left: .14em; }
+  .origin-pair { gap: .75rem; }
+  .origin-word { font-size: clamp(2.2rem, 10vw, 3.7rem); }
+  .origin-language { font-size: .5rem; }
+  .origin-plus { font-size: 1.8rem; }
+  .sector-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .sector h3 { margin-top: 1.4rem; }
+  .acquisition-action { padding: 1.5rem; }
+}
+@media (max-width: 28rem) {
+  .development-status { max-width: 9rem; text-align: right; line-height: 1.6; }
+  .hero h1 { font-size: clamp(2.75rem, 13.6vw, 3.75rem); }
+  .hero-actions { align-items: stretch; flex-direction: column; }
+  .hero-actions .button { width: 100%; }
+  .origin-item { gap: .4rem; }
+  .origin-word { font-size: clamp(1.85rem, 10vw, 2.75rem); }
+  .origin-meaning { font-size: .77rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
