@@ -13,19 +13,17 @@ This change retains the existing dark blue-green palette, Helvetica/Georgia typo
 - **Story:** an invented European-inspired name from Italian `ri-` (again/anew) + informal Norwegian `natta` (good night).
 - **Potential applications:** Sleep Technology, Wellness/Relaxation and Bedding/Sleepwear.
 
-## Important: checkout link still requires verification
+## Official Spaceship Buy Now link
 
-The official Spaceship SellerHub Buy Now URL was not available to this change. We do not fabricate a purchase link.
+The seller confirmed the listing has status `on_sale` through the authenticated Spaceship MCP `marketplace_listing_get` tool. The returned `cartLinks.buyNow` value was:
 
-Currently the two purchase CTAs **request a checkout link** by emailing the pre-existing `info@rinatta.com` address. The offer action also uses email. **Verify this inbox is operational before merging.**
+`https://www.spaceship.com/marketplace/buy-now/uNrtw6VpMA6Lfl_MjnkqHo/rinatta.com`
 
-After listing is confirmed in Spaceship:
+Both on-page Buy Now buttons link directly to this Spaceship checkout and open in a new tab; no payment is collected on this site.
 
-1. Read `marketplace_listing_get` for `rinatta.com` using authenticated Spaceship MCP.
-2. Verify listing status and the $4,995 Buy Now price.
-3. Obtain the actual `cartLinks.buyNow` value and verify the HTTPS host and domain.
-4. Update the two purchase CTAs in `index.html` to point to that official URL, and only then label them as direct Buy Now buttons.
-5. Keep any negotiated offers under the seller's manual control.
+The **Make an offer** link still uses `info@rinatta.com` so the seller can handle negotiations personally. Verify this email inbox is operational before merging, or replace it with an official, validated marketplace negotiation link.
+
+If the SellerHub listing is changed or recreated, retrieve the current `cartLinks.buyNow` again and update both button URLs. Do not assume links remain valid indefinitely.
 
 ## Preview and deployment
 
