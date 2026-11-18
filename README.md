@@ -1,30 +1,31 @@
-# Rinatta — domain-for-sale page
+# Rinatta.com — domain acquisition landing page
 
-Dependency-free static landing page for `rinatta.com`, adapted from the original coming-soon design.
+A dependency-free static site for selling the **domain name only**. This revision keeps the original Rinatta palette and circular brand emblem while replacing the crowded, multi-section page with one clear offer.
 
-## Preserved visual identity
+## Buyer journey
 
-This change retains the existing dark blue-green palette, Helvetica/Georgia typography, radial nighttime background, delicate grid and circular metallic Rinatta emblem. The existing favicon and CNAME are unchanged.
+- Understand **Rinatta.com** in the hero.
+- See the **$4,995 USD** fixed Buy Now price.
+- Click **Buy the domain** to open the verified Spaceship SellerHub cart link.
+- Or click **Make an offer** to send an offer to the existing, seller-confirmed working inbox `info@rinatta.com`.
+- A compact strip explains the authentic invented-name origin: Italian `ri-` (“again/anew”) + informal Norwegian `natta` (“good night”).
 
-## Sale information
+The domain only is for sale; there is no bundled business, product or trademark.
 
-- **Asking price:** $4,995 USD.
-- **Asset offered:** the `rinatta.com` domain only, not an operating business, products or registered trademark rights.
-- **Story:** an invented European-inspired name from Italian `ri-` (again/anew) + informal Norwegian `natta` (good night).
-- **Potential applications:** Sleep Technology, Wellness/Relaxation and Bedding/Sleepwear.
-
-## Official Spaceship Buy Now link
-
-The seller confirmed the listing has status `on_sale` through the authenticated Spaceship MCP `marketplace_listing_get` tool. The returned `cartLinks.buyNow` value was:
+## Verified payment link
 
 `https://www.spaceship.com/marketplace/buy-now/uNrtw6VpMA6Lfl_MjnkqHo/rinatta.com`
 
-Both on-page Buy Now buttons link directly to this Spaceship checkout and open in a new tab; no payment is collected on this site.
+The domain listing was reported `on_sale` by the owner's authenticated Spaceship MCP check. If the listing is recreated, verify the cart link again.
 
-The **Make an offer** link still uses `info@rinatta.com` so the seller can handle negotiations personally. Verify this email inbox is operational before merging, or replace it with an official, validated marketplace negotiation link.
+## Design and deployment
 
-If the SellerHub listing is changed or recreated, retrieve the current `cartLinks.buyNow` again and update both button URLs. Do not assume links remain valid indefinitely.
+The page uses the existing dark blue-green color system, radial background, metallic circular ring, favicon and `CNAME`. The stylesheet is referenced as `styles.css?v=3` to force the browser to request updated CSS instead of reusing a stale cached asset.
 
-## Preview and deployment
+Files: `index.html`, `styles.css`, `favicon.svg`, `CNAME`.
 
-Open `index.html` in a browser or serve with a static server. Existing `CNAME` is `rinatta.com`; merging into `main` may deploy to the current site through GitHub Pages. No build process, JavaScript, DNS changes or additional services are required.
+Static HTML/CSS only. GitHub Pages deploys from `main`; merging a PR may publish it automatically.
+
+## QA
+
+Required before and after deployment: verify the two CTA destinations, price, page responsiveness, and updated stylesheet; verify live page contains a styled primary button and neither the old “Coming Soon” content nor the previous long sector sections.
