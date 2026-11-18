@@ -1,19 +1,30 @@
-# Rinatta Coming-Soon Page
+# Rinatta — domain-for-sale page
 
-Dependency-free static landing page for Rinatta.
+Dependency-free static landing page for `rinatta.com`, adapted from the original coming-soon design.
 
-## Preview
+## Preserved visual identity
 
-Open `index.html` directly in a browser, or serve this directory with any static web server.
+This change retains the existing dark blue-green palette, Helvetica/Georgia typography, radial nighttime background, delicate grid and circular metallic Rinatta emblem. The existing favicon and CNAME are unchanged.
 
-## Verify
+## Sale information
 
-Run from the project root:
+- **Asking price:** $4,995 USD.
+- **Asset offered:** the `rinatta.com` domain only, not an operating business, products or registered trademark rights.
+- **Story:** an invented European-inspired name from Italian `ri-` (again/anew) + informal Norwegian `natta` (good night).
+- **Potential applications:** Sleep Technology, Wellness/Relaxation and Bedding/Sleepwear.
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\tests\validate-site.ps1
-```
+## Official Spaceship Buy Now link
 
-## Deploy
+The seller confirmed the listing has status `on_sale` through the authenticated Spaceship MCP `marketplace_listing_get` tool. The returned `cartLinks.buyNow` value was:
 
-Upload `index.html`, `styles.css`, and `favicon.svg` to the document root for `rinatta.com`. No build command or server-side runtime is required.
+`https://www.spaceship.com/marketplace/buy-now/uNrtw6VpMA6Lfl_MjnkqHo/rinatta.com`
+
+Both on-page Buy Now buttons link directly to this Spaceship checkout and open in a new tab; no payment is collected on this site.
+
+The **Make an offer** link still uses `info@rinatta.com` so the seller can handle negotiations personally. Verify this email inbox is operational before merging, or replace it with an official, validated marketplace negotiation link.
+
+If the SellerHub listing is changed or recreated, retrieve the current `cartLinks.buyNow` again and update both button URLs. Do not assume links remain valid indefinitely.
+
+## Preview and deployment
+
+Open `index.html` in a browser or serve with a static server. Existing `CNAME` is `rinatta.com`; merging into `main` may deploy to the current site through GitHub Pages. No build process, JavaScript, DNS changes or additional services are required.
