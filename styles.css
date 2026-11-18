@@ -39,12 +39,11 @@ h1 em { display: block; margin-left: .52em; color: #b6c9c4; font-weight: 400; }
 .price { margin: .4rem 0 1.3rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.8rem, 4.25vw, 4rem); line-height: 1.1; letter-spacing: -.035em; }
 .price span { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .72rem; letter-spacing: .14em; color: #a7b9b4; vertical-align: middle; }
 .actions { display: flex; gap: .75rem; align-items: stretch; flex-wrap: wrap; }
-.button { display: inline-flex; align-items: center; justify-content: center; min-height: 3.6rem; padding: 1rem 1.35rem; text-decoration: none; font-size: .875rem; font-weight: 600; border: 1px solid #657b76; transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease; }
-.button:active { transform: translateY(1px); }
-.button-primary { min-width: 12.5rem; color: var(--ink); background: linear-gradient(115deg, var(--sage), var(--aqua)); border-color: transparent; }
-.button-primary:hover { background: #d4f0e5; }
-.button-secondary { color: #d8e7df; background: rgb(6 20 24 / 40%); }
-.button-secondary:hover { color: var(--text); border-color: var(--aqua); background: rgb(32 69 73 / 70%); }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 3.6rem; padding: 1rem 1.35rem; text-decoration: none; font-size: .875rem; font-weight: 600; border: 1px solid #657b76; transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
+.button-primary { min-height: 3rem; min-width: 0; padding: .75rem 1rem; font-size: .8125rem; color: #d8e7df; background: transparent; border-color: #657b76; }
+.button-primary:hover { color: var(--text); border-color: #a1b2b1; background: rgb(32 69 73 / 35%); }
+.button-secondary { color: #d8e7df; background: transparent; }
+.button-secondary:hover { color: var(--text); border-color: #a1b2b1; background: rgb(32 69 73 / 35%); }
 .checkout-note { display: flex; align-items: center; gap: .55rem; margin: 1.05rem 0 0; font-size: .875rem; line-height: 1.5; color: #a2b4af; }
 .tiny-shield { color: var(--sage); font-size: 1rem; line-height: 1; }
 .badge-stage { display: grid; place-items: center; min-width: 0; }
